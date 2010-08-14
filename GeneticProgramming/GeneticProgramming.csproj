@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4000C0C1-94D7-40D8-B24C-6245DF6D24CD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GeneticProgramming</RootNamespace>
+    <AssemblyName>GeneticProgramming</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FitnessFunctions\AddThreeVariablesFitnessFunction.cs" />
+    <Compile Include="FitnessFunctions\AverageFitnessFunction.cs" />
+    <Compile Include="FitnessFunctions\PowerFitnessFunction.cs" />
+    <Compile Include="FitnessFunctions\StandardDeviationFitnessFunction.cs" />
+    <Compile Include="Interfaces\IFitnessFunction.cs" />
+    <Compile Include="Interfaces\INode.cs" />
+    <Compile Include="Interfaces\INodeMutator.cs" />
+    <Compile Include="Interfaces\IPopulation.cs" />
+    <Compile Include="Interfaces\IReproduction.cs" />
+    <Compile Include="Interfaces\ISelection.cs" />
+    <Compile Include="NodeContext.cs" />
+    <Compile Include="NodeFactory.cs" />
+    <Compile Include="NodeMutators\SimpleNodeMutator.cs" />
+    <Compile Include="Nodes\AddNode.cs" />
+    <Compile Include="Nodes\CollectionSizeNode.cs" />
+    <Compile Include="Nodes\ConstantNode.cs" />
+    <Compile Include="Nodes\DivideNode.cs" />
+    <Compile Include="Nodes\InputSizeNode.cs" />
+    <Compile Include="Nodes\InputVariableNode.cs" />
+    <Compile Include="Nodes\MultiplyNode.cs" />
+    <Compile Include="Nodes\SubtractNode.cs" />
+    <Compile Include="Nodes\SumNode.cs" />
+    <Compile Include="Population.cs" />
+    <Compile Include="Populations\TwoIslandsPopulation.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomUtil.cs" />
+    <Compile Include="Selection\ProbabilisticSelection.cs" />
+    <Compile Include="Selection\RouletteSelection.cs" />
+    <Compile Include="SimpleReproduction.cs" />
+    <Compile Include="TimesThreeFitnessFunction.cs" />
+    <Compile Include="Utility\ThreadSafeDictionary.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Experimentation\ExperimentSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

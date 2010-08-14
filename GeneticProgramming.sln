@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneticProgramming", "GeneticProgramming\GeneticProgramming.csproj", "{4000C0C1-94D7-40D8-B24C-6245DF6D24CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{EE397F88-564A-4788-A6E4-1DBDDC1B6B61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4000C0C1-94D7-40D8-B24C-6245DF6D24CD}.Debug|x86.ActiveCfg = Debug|x86
+		{4000C0C1-94D7-40D8-B24C-6245DF6D24CD}.Debug|x86.Build.0 = Debug|x86
+		{4000C0C1-94D7-40D8-B24C-6245DF6D24CD}.Release|x86.ActiveCfg = Release|x86
+		{4000C0C1-94D7-40D8-B24C-6245DF6D24CD}.Release|x86.Build.0 = Release|x86
+		{EE397F88-564A-4788-A6E4-1DBDDC1B6B61}.Debug|x86.ActiveCfg = Debug|x86
+		{EE397F88-564A-4788-A6E4-1DBDDC1B6B61}.Debug|x86.Build.0 = Debug|x86
+		{EE397F88-564A-4788-A6E4-1DBDDC1B6B61}.Release|x86.ActiveCfg = Release|x86
+		{EE397F88-564A-4788-A6E4-1DBDDC1B6B61}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
